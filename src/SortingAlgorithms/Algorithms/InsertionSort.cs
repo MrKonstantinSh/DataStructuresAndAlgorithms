@@ -4,33 +4,39 @@ public static class InsertionSort
 {
     public static int[] SortAscending(int[] arrayToSort)
     {
-        for (var index = 0; index < arrayToSort.Length; index++)
+        var resultArray = new int[arrayToSort.Length];
+        Array.Copy(arrayToSort, resultArray, arrayToSort.Length);
+        
+        for (var index = 0; index < resultArray.Length; index++)
         {
             var currentElement = index;
-            while (currentElement > 0 && arrayToSort[currentElement] < arrayToSort[currentElement - 1])
+            while (currentElement > 0 && resultArray[currentElement] < resultArray[currentElement - 1])
             {
-                (arrayToSort[currentElement], arrayToSort[currentElement - 1]) = (arrayToSort[currentElement - 1], arrayToSort[currentElement]);
+                (resultArray[currentElement], resultArray[currentElement - 1]) = (resultArray[currentElement - 1], resultArray[currentElement]);
 
                 currentElement--;
             }
         }
 
-        return arrayToSort;
+        return resultArray;
     }
     
     public static int[] SortDescending(int[] arrayToSort)
     {
-        for (var index = 0; index < arrayToSort.Length; index++)
+        var resultArray = new int[arrayToSort.Length];
+        Array.Copy(arrayToSort, resultArray, arrayToSort.Length);
+        
+        for (var index = 0; index < resultArray.Length; index++)
         {
             var currentElement = index;
-            while (currentElement > 0 && arrayToSort[currentElement] > arrayToSort[currentElement - 1])
+            while (currentElement > 0 && resultArray[currentElement] > resultArray[currentElement - 1])
             {
-                (arrayToSort[currentElement], arrayToSort[currentElement - 1]) = (arrayToSort[currentElement - 1], arrayToSort[currentElement]);
+                (resultArray[currentElement], resultArray[currentElement - 1]) = (resultArray[currentElement - 1], resultArray[currentElement]);
 
                 currentElement--;
             }
         }
 
-        return arrayToSort;
+        return resultArray;
     }
 }

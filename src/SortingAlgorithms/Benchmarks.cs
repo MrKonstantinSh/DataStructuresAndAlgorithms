@@ -8,32 +8,25 @@ public class Benchmarks
 {
     private int[] _arrayToSort = null!;
 
-    [Params(10, 100, 1_000)]
+    // ReSharper disable once UnusedAutoPropertyAccessor.Global
+    [Params(1_000, 10_000, 100_000)]
     public int ItemCount { get; set; }
 
     [GlobalSetup]
-    public void SetUp()
+    public void GlobalSetup()
     {
-        const int minValue = -10_000_000;
-        const int maxValue = 10_000_000;
+        _arrayToSort = new int[ItemCount];
         var random = new Random(42);
 
-        _arrayToSort = Enumerable
-            .Range(minValue, maxValue)
-            .Select(e => random.Next(minValue, maxValue))
-            .Take(ItemCount)
-            .ToArray();
+        for (var i = 0; i < ItemCount; i++)
+        {
+            _arrayToSort[i] = random.Next(-1_000_000, 1_000_000);
+        }
     }
-
+    
     [Benchmark]
     public int[] InsertionSortAscending()
     {
         return InsertionSort.SortAscending(_arrayToSort);
-    }
-    
-    [Benchmark]
-    public int[] InsertionSortDescending()
-    {
-        return InsertionSort.SortDescending(_arrayToSort);
     }
 }
