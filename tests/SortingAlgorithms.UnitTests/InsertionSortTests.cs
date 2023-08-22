@@ -1,4 +1,4 @@
-namespace SortingAlgorithms.Tests;
+namespace SortingAlgorithms.UnitTests;
 
 public class InsertionSortTests
 {
