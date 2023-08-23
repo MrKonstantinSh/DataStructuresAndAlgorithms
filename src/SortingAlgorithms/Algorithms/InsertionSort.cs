@@ -7,9 +7,10 @@ public static class InsertionSort
         var resultArray = new int[arrayToSort.Length];
         Array.Copy(arrayToSort, resultArray, arrayToSort.Length);
         
-        for (var index = 0; index < resultArray.Length; index++)
+        // Algorithm.
+        for (var i = 0; i < resultArray.Length; i++)
         {
-            var currentElement = index;
+            var currentElement = i;
             while (currentElement > 0 && resultArray[currentElement] < resultArray[currentElement - 1])
             {
                 (resultArray[currentElement], resultArray[currentElement - 1]) = (resultArray[currentElement - 1], resultArray[currentElement]);
@@ -26,9 +27,10 @@ public static class InsertionSort
         var resultArray = new int[arrayToSort.Length];
         Array.Copy(arrayToSort, resultArray, arrayToSort.Length);
         
-        for (var index = 0; index < resultArray.Length; index++)
+        // Algorithm.
+        for (var i = 0; i < resultArray.Length; i++)
         {
-            var currentElement = index;
+            var currentElement = i;
             while (currentElement > 0 && resultArray[currentElement] > resultArray[currentElement - 1])
             {
                 (resultArray[currentElement], resultArray[currentElement - 1]) = (resultArray[currentElement - 1], resultArray[currentElement]);
