@@ -9,7 +9,7 @@ public class Benchmarks
     private int[] _arrayToSort = null!;
 
     // ReSharper disable once UnusedAutoPropertyAccessor.Global
-    [Params(1_000, 10_000, 100_000)]
+    [Params(10, 1_000)]
     public int ItemCount { get; set; }
 
     [GlobalSetup]
@@ -28,5 +28,23 @@ public class Benchmarks
     public int[] InsertionSortAscending()
     {
         return InsertionSort.SortAscending(_arrayToSort);
+    }
+    
+    [Benchmark]
+    public int[] SelectionSortAscending()
+    {
+        return SelectionSort.SortAscending(_arrayToSort);
+    }
+    
+    [Benchmark]
+    public int[] BubbleSortAscending()
+    {
+        return BubbleSort.SortAscending(_arrayToSort);
+    }
+    
+    [Benchmark]
+    public int[] NativeSortAscending()
+    {
+        return NativeSort.SortAscending(_arrayToSort);
     }
 }
