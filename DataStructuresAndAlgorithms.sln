@@ -8,6 +8,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{945DEA2F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingAlgorithms.UnitTests", "tests\SortingAlgorithms.UnitTests\SortingAlgorithms.UnitTests.csproj", "{7A1A605F-F9CC-4C90-9C38-E6EA511A1D33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearchAlgorithmsAndTasks", "src\BinarySearchAlgorithmsAndTasks\BinarySearchAlgorithmsAndTasks.csproj", "{F68BDBAF-549D-4E62-A11E-946698D5379E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearchAlgorithmsAndTasks.UnitTests", "tests\BinarySearchAlgorithmsAndTasks.UnitTests\BinarySearchAlgorithmsAndTasks.UnitTests.csproj", "{43542ABF-B7ED-4258-BD12-4A4F7E8430B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,6 +20,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{80B02153-0CA6-4551-920E-AE0D1E6D0489} = {E0E7D9AF-FCBC-460D-A602-36D8DD468CDF}
 		{7A1A605F-F9CC-4C90-9C38-E6EA511A1D33} = {945DEA2F-0282-499C-87E8-E23E7CAD5886}
+		{F68BDBAF-549D-4E62-A11E-946698D5379E} = {E0E7D9AF-FCBC-460D-A602-36D8DD468CDF}
+		{43542ABF-B7ED-4258-BD12-4A4F7E8430B8} = {945DEA2F-0282-499C-87E8-E23E7CAD5886}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{80B02153-0CA6-4551-920E-AE0D1E6D0489}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -26,5 +32,13 @@ Global
 		{7A1A605F-F9CC-4C90-9C38-E6EA511A1D33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A1A605F-F9CC-4C90-9C38-E6EA511A1D33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A1A605F-F9CC-4C90-9C38-E6EA511A1D33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F68BDBAF-549D-4E62-A11E-946698D5379E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F68BDBAF-549D-4E62-A11E-946698D5379E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F68BDBAF-549D-4E62-A11E-946698D5379E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F68BDBAF-549D-4E62-A11E-946698D5379E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43542ABF-B7ED-4258-BD12-4A4F7E8430B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43542ABF-B7ED-4258-BD12-4A4F7E8430B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43542ABF-B7ED-4258-BD12-4A4F7E8430B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43542ABF-B7ED-4258-BD12-4A4F7E8430B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
